@@ -7,15 +7,15 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 var ytPlayer = [];
 var ytData = [
   {
-    id: '-tKVN2mAKRI',
+    id: 'XvQ8uiA5BqE',
     area: 'ytplayer1'
   },
   {
-    id: '-tKVN2mAKRI',
+    id: 'SB29JNfi45c',
     area: 'ytplayer2'
   },
   {
-    id: '-tKVN2mAKRI',
+    id: '7ZY0XHQcx5k',
     area: 'ytplayer3'
   }
 ];
