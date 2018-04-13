@@ -20,6 +20,39 @@ var ytData = [
   }
 ];
 
+function videoController(obj, flag) {
+  if (flag) {
+    obj.playVideo();
+  } else {
+    obj.pauseVideo();
+  }
+}
+
+function setPosition(obj) {
+  /*
+  const pos = {
+    t_obj: obj.offsetTop,
+    t_scr: $(document).scrollTop(),
+    h_obj: obj.height(),
+    h_win: window.innerHeight
+  }
+  if(pos.t_scr + pos.h_win > pos.t_obj && pos.t_scr - pos.h_win/3 < pos.t_obj){
+    videoControl(obj, true);
+  } else {
+    videoControl(obj, false);
+  }
+  */
+}
+
+function onPlayerReady(e) {
+  for (var i = 0; i < ytData.length; i++) {
+    if(e.target.getIframe().id == ytData[i]['area']) {
+      console.log(ytData[i]['area'] + ' のプレーヤー準備完了しました。');
+      setPosition(ytPlayer[i]);
+    }
+  }
+}
+
 // Replace the 'ytplayer' element with an <iframe> and
 // YouTube player after the API code downloads.
 function onYouTubePlayerAPIReady() {
@@ -32,13 +65,5 @@ function onYouTubePlayerAPIReady() {
         'onReady': onPlayerReady
       }
     });
-  }
-}
-
-function onPlayerReady(e) {
-  for (var i = 0; i < ytData.length; i++) {
-    if(e.target.getIframe().id == ytData[i]['area']) {
-      console.log(ytData[i]['area'] + ' のプレーヤー準備完了しました。');
-    }
   }
 }

@@ -39,5 +39,7 @@
   }
 }
 .content {
-  margin-bottom: 3em;
+  background: #eee;
+  padding-bottom: 30rem;
+  margin-bottom: 3rem;
 }
